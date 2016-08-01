@@ -21,6 +21,13 @@ class Node  {
     show() {
         return this.data;
     }
+
+    /**
+     * a textual representation of value in node
+     */
+    toString() {
+        return this.data;
+    }
 }
 
 /**
@@ -85,7 +92,7 @@ class BST  {
     inOrder(node = this.root) {
         if( node !== null) {
             this.inOrder(node.left);
-            console.log(node.show() + " ");
+            console.log(`${node}`);
             this.inOrder(node.right);
         }
     }
